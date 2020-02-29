@@ -1,0 +1,25 @@
+
+
+Welcome to Challanges
+
+We have a real life problem of two kangaroos.At what distance they meet each other if they are moving in same direction
+
+#include<iostream>
+using namespace std;
+int main()
+{
+    int a,b,c,d,l,m;
+    cin>>a>>b>>c>>d;
+    l=a+b;m=c+d;
+x: if(l==m&&a<c)
+   {cout<<"Yes";}
+else if(l<m)
+{l=l+b;m=m+d;
+goto x;}
+else
+    cout<<"No";
+
+
+return 0;
+}
+
