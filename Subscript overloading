@@ -1,0 +1,42 @@
+
+Welcome
+
+#include<iostream>
+#include<cstdlib>
+using namespace std;
+class Array
+{int *ptr,size;
+
+	public:
+		Array(int *p=NULL,int s=0)
+		{
+			size=s;
+			ptr=NULL;
+			if(s!=0)
+			{ptr=new int(s);
+			for(int i=0;i<s;i++)
+			ptr[i]=p[i];
+			}
+		}
+		int & operator [](int index)
+		{
+			if(index>=size)
+			{cout<<"Beyond the size of array"<<endl;
+			  exit(0);
+			}
+			return ptr[index];
+		}
+		void print()
+		{for(int i=0;i<size;i++)
+		cout<<ptr[i]<<" ";
+		cout<<endl;
+		}
+};
+int main()
+{
+	int a[]={1,2,3,4};
+	Array arr(a,4);
+	arr[2]=6;
+	arr.print();
+	arr[6]=8;
+}
