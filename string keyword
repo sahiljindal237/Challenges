@@ -1,0 +1,30 @@
+
+welcome
+
+#include <iostream>
+#include <string.h>
+using namespace std;
+
+int main() {
+   string a;
+   string b;
+   char d;
+   cin>>a>>b;
+   cout<<a.size()<<" "<<b.size()<<endl;
+   string c=a+b;
+   cout<<c<<endl;
+   d=a[0];
+   a[0]=b[0];
+   b[0]=d;
+   cout<<a<<" "<<b;
+}
+
+program will take two input string and perform operations 
+
+Output
+abcd
+ef
+4 2
+ebcd af
+
+Thank You
